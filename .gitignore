@@ -3,3 +3,6 @@
 /resources/
 .hugo_build.lock
 node_modules/
+
+# macOS cruft
+.DS_Store
