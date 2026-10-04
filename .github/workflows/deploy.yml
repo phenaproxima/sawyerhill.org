@@ -18,9 +18,7 @@ jobs:
   build:
     runs-on: ubuntu-latest
     env:
-      # The public URL the site is served from. No custom domain yet, so this
-      # is the project path under the user Pages site.
-      BASE_URL: https://phenaproxima.net/sawyerhill.org/
+      BASE_URL: https://sawyerhill.org/
     steps:
       - uses: actions/checkout@v4
 
