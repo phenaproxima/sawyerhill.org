@@ -5,11 +5,11 @@
 <meta name="MobileOptimized" content="width" />
 <meta name="HandheldFriendly" content="true" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<link rel="icon" href="/files/sun2_0.gif" type="image/gif" />
+<link rel="icon" href="{{ "files/sun2_0.gif" | relURL }}" type="image/gif" />
 
     <title>{{ .Title }} | {{ .Site.Title }}</title>
-    <link rel="stylesheet" media="all" href="/files/css/css_UzMyn586wLTNqswid7vIntpmdv1e9sy9EB11qrf32Jo.css" />
-<link rel="stylesheet" media="all" href="/files/css/css_PblfIxtqwTYJXV9KNMJxGFJornTq7fQJyq7jgeff8fc.css" />
+    <link rel="stylesheet" media="all" href="{{ "files/css/css_UzMyn586wLTNqswid7vIntpmdv1e9sy9EB11qrf32Jo.css" | relURL }}" />
+<link rel="stylesheet" media="all" href="{{ "files/css/css_PblfIxtqwTYJXV9KNMJxGFJornTq7fQJyq7jgeff8fc.css" | relURL }}" />
 {{ block "head" . }}{{ end }}
 
 <style media="all">
@@ -32,11 +32,11 @@ h1,h2,h3,h4,h5 {font-family: Georgia, 'Palatino Linotype', 'Book Antiqua', 'URW 
 <div id="page" style="padding: 10px;">
     <header id="header" role="banner" style=" border-width: 1px;" aria-label="Site header">
     <div class="section clearfix">
-    <div id="header-watermark" style="background-image: url(/files/pat-6.png);" >
+    <div id="header-watermark" style="background-image: url({{ "files/pat-6.png" | relURL }});" >
     <div class="section clearfix">
 
               <div id="header-searchbox">
-       <form class="search-block-form" action="/search/" method="get" id="search-block-form" accept-charset="UTF-8">
+       <form class="search-block-form" action="{{ "search/" | relURL }}" method="get" id="search-block-form" accept-charset="UTF-8">
   <div class="js-form-item form-item js-form-type-search form-item-keys js-form-item-keys form-no-label">
       <label for="edit-keys" class="visually-hidden">Search</label>
         <input onblur="if (this.value == '') {this.value = 'search this site';}" onfocus="if (this.value == 'search this site') {this.value = '';}" type="search" id="edit-keys" name="q" value="search this site" size="13" maxlength="128" class="form-search form-text"  />
@@ -55,14 +55,14 @@ h1,h2,h3,h4,h5 {font-family: Georgia, 'Palatino Linotype', 'Book Antiqua', 'URW 
 
 
                 <div id="site_logo">
-        <a href="/" title="Home" rel="home">
-          <img src="/files/logo.png" alt="Home" />
+        <a href="{{ "" | relURL }}" title="Home" rel="home">
+          <img src="{{ "files/logo.png" | relURL }}" alt="Home" />
         </a>
         </div> <!-- /#logo -->
 
               <div id="name-and-slogan" >
                                   <h1 id="site-name">
-                <a href="/" title="Home" rel="home"><span>{{ .Site.Title }}</span></a>
+                <a href="{{ "" | relURL }}" title="Home" rel="home"><span>{{ .Site.Title }}</span></a>
               </h1>
                                                       <div id="site-slogan">{{ .Site.Params.tagline }}</div>
                   </div> <!-- /#name-and-slogan -->
@@ -96,7 +96,7 @@ h1,h2,h3,h4,h5 {font-family: Georgia, 'Palatino Linotype', 'Book Antiqua', 'URW 
               <ul class="menu-bart">
                     {{ range .Site.Menus.main }}
                     <li class="menu-item">
-        <a href="{{ .URL }}">{{ .Name }}</a>
+        <a href="{{ .URL | relURL }}">{{ .Name }}</a>
               </li>
                     {{ end }}
         </ul>
@@ -244,7 +244,7 @@ h1,h2,h3,h4,h5 {font-family: Georgia, 'Palatino Linotype', 'Book Antiqua', 'URW 
   </div>
 
 
-    <script src="/files/js/js_yX8zCP41Y8YlDFMIo9oVS3Fs-vUit2BHV47e08E0N2k.js"></script>
+    <script src="{{ "files/js/js_yX8zCP41Y8YlDFMIo9oVS3Fs-vUit2BHV47e08E0N2k.js" | relURL }}"></script>
 
   </body>
 </html>

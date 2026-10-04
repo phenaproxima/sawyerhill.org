@@ -17,6 +17,10 @@ concurrency:
 jobs:
   build:
     runs-on: ubuntu-latest
+    env:
+      # The public URL the site is served from. No custom domain yet, so this
+      # is the project path under the user Pages site.
+      BASE_URL: https://phenaproxima.net/sawyerhill.org/
     steps:
       - uses: actions/checkout@v4
 
@@ -27,9 +31,11 @@ jobs:
           extended: true
 
       - name: Build the site
-        run: hugo --minify --destination public
+        run: hugo --minify --baseURL "$BASE_URL" --destination public
 
       - name: Build the search index
+        # The search template reads the base path from --baseURL and sets
+        # Pagefind's baseUrl itself, so no extra Pagefind flags are needed.
         run: npx --yes pagefind --site public --output-subdir _pagefind
 
       - name: Upload the Pages artifact

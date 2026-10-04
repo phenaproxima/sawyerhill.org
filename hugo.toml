@@ -1,8 +1,10 @@
-# The real baseURL depends on the GitHub repo / Pages URL. Set it before
-# deploying. For local preview, `hugo server` overrides this automatically.
-baseURL = 'https://example.org/'
+# Local default. The deploy workflow overrides this with --baseURL for the
+# real GitHub Pages URL. canonifyURLs + relURL in templates make links work
+# under whatever base path is supplied at build time.
+baseURL = 'http://localhost/'
 title = 'Sawyer Hill EcoVillage'
 theme = 'mayo'
+canonifyURLs = true
 # Page bodies are raw HTML lifted from the old Drupal site. Let them through.
 [markup.goldmark.renderer]
   unsafe = true
@@ -40,6 +42,17 @@ theme = 'mayo'
 
 [params]
   tagline = 'Two neighborhoods nestled on one beautiful site'
+  # The contact form POSTs to Formspree and does nothing until this is set.
   # Create a form at https://formspree.io with the site owner's email, then
   # paste its ID here (the part after https://formspree.io/f/).
   formspreeFormId = 'YOUR_FORMSPREE_FORM_ID'
+
+# NOTE for anyone editing content/: six images are broken on purpose. They
+# returned 404 on the old live site too, so they show as broken-image icons
+# there and here. They are not a migration bug. To clean them up, delete the
+# <img> tags (don't "fix" the paths):
+#   /files/CommunityRendering-small.jpg   (home page)
+#   /files/fullsite.jpg                   (cohousing.md)
+#   /files/cch_1stfloor.gif, /files/cch_basement.gif   (camelot-commonhouse.md)
+#   mc-ch_basement.gif, mc-ch_first_floor700.gif       (mosaic-commonhouse.md)
+

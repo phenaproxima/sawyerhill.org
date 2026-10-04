@@ -1,7 +1,10 @@
 {{ define "head" }}
-<!-- Pagefind is generated at build time by `npx pagefind --site public`. -->
-<link href="/_pagefind/pagefind-ui.css" rel="stylesheet">
-<script src="/_pagefind/pagefind-ui.js"></script>
+<!-- Pagefind is generated at build time by build.sh / the deploy workflow.
+     The bundle URL is canonified to include the base path, so Pagefind
+     auto-detects where to fetch its index from. baseUrl (below) makes the
+     result links point into the subpath. -->
+<link href="{{ "_pagefind/pagefind-ui.css" | relURL }}" rel="stylesheet">
+<script src="{{ "_pagefind/pagefind-ui.js" | relURL }}"></script>
 {{ end }}
 
 {{ define "main" }}
@@ -10,6 +13,9 @@
 window.addEventListener('DOMContentLoaded', function () {
   var ui = new PagefindUI({
     element: '#search',
+    // Prepend the site's base path ("" at a domain root, "/sawyerhill.org"
+    // under the current Pages subpath) to every result link.
+    baseUrl: '{{ (.Site.BaseURL | urls.Parse).Path }}',
     showSubResults: true,
     showImages: false
   });
