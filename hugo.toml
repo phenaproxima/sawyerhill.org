@@ -55,7 +55,7 @@ canonifyURLs = true
   # The contact form POSTs to Formspree and does nothing until this is set.
   # Create a form at https://formspree.io with the site owner's email, then
   # paste its ID here (the part after https://formspree.io/f/).
-  formspreeFormId = 'YOUR_FORMSPREE_FORM_ID'
+  formspreeFormId = 'xnpjayve'
 
 # NOTE for anyone editing content/: six images were broken (404) on the old
 # live site too. Five were removed during migration (their <img> tags deleted);
