@@ -16,5 +16,3 @@ Check us out! Come to a home tour and see the site, attend an introduction to co
 </tr>
 </tbody>
 </table>
-
-<center><a href="http://www.wunderground.com/US/MA/Berlin.html?bannertypeclick=big2"><img alt="Click for Berlin, Massachusetts Forecast" border="0" height="60" src="http://banners.wunderground.com/weathersticker/big2_cond/language/www/US/MA/Berlin.gif" width="468"></a></center>
