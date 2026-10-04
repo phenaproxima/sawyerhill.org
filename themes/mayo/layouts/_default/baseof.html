@@ -42,8 +42,6 @@ h1,h2,h3,h4,h5 {font-family: Georgia, 'Palatino Linotype', 'Book Antiqua', 'URW 
         <input onblur="if (this.value == '') {this.value = 'search this site';}" onfocus="if (this.value == 'search this site') {this.value = '';}" type="search" id="edit-keys" name="q" value="search this site" size="13" maxlength="128" class="form-search form-text"  />
 
         </div>
-<div class="form-actions js-form-wrapper form-wrapper" id="edit-actions"><input type="hidden" name="submit" value="" />
-</div>
 
 </form>
 
@@ -108,14 +106,9 @@ h1,h2,h3,h4,h5 {font-family: Georgia, 'Palatino Linotype', 'Book Antiqua', 'URW 
   </div>
 
     </div>
-                <div class="region region-highlighted">
-    <div data-drupal-messages-fallback class="hidden"></div>
-
-  </div>
-
 
     <!-- space between menus and contents -->
-    <div class="spacer clearfix cfie"></div>
+    <div class="spacer"></div>
 
     <div id="main-wrapper">
     <div id="main" class="clearfix"
@@ -153,21 +146,11 @@ h1,h2,h3,h4,h5 {font-family: Georgia, 'Palatino Linotype', 'Book Antiqua', 'URW 
 
       <div class="content">
       <article class="node node--type-page node--view-mode-full clearfix">
-  <header>
-
-
-      </header>
   <div class="node__content clearfix">
 
             <div class="field field--name-body field--type-text-with-summary field--label-hidden field__item">{{ block "main" . }}{{ .Content }}{{ end }}</div>
 
   </div>
-
-      <div class="node__links">
-
-    </div>
-
-
 
 </article>
 
@@ -216,7 +199,6 @@ h1,h2,h3,h4,h5 {font-family: Georgia, 'Palatino Linotype', 'Book Antiqua', 'URW 
 
 
                           </div>  <!--/.column-blocks -->
-          <div class="spacer clearfix cfie"></div>
 
 
         </div> <!--/#bottom-columns -->
@@ -230,12 +212,6 @@ h1,h2,h3,h4,h5 {font-family: Georgia, 'Palatino Linotype', 'Book Antiqua', 'URW 
     </div> <!-- /#main-wrapper -->
 
     <!-- space between contents and footer -->
-    <div id="spacer" class="clearfix cfie"></div>
-
-    <div id="footer-wrapper">
-
-
-    </div> <!-- /#footer-wrapper -->
 
 
   </div> <!-- /#page -->
