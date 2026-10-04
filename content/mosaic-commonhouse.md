@@ -32,6 +32,4 @@ Our Common House provides
 
 All residents have full use of the common house.  It's like having extra rooms on your house that happens to not be attached.
 
-<p><a href="http://www.mosaic-commons.org/chplans"><img border="0" align="right" src="http://www.sawyerhill.org/files/mc-ch_first_floor700.gif"></a></p>
-<p><a href="http://www.mosaic-commons.org/chplans"><img border="0" align="right" src="http://www.sawyerhill.org/files/mc-ch_basement.gif"></a><br>
-<br clear="all"></p>
+<p><a href="http://www.mosaic-commons.org/chplans">Common house floor plans</a></p>

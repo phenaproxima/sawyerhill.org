@@ -2,7 +2,8 @@
 title = "Camelot Common House"
 +++
 
-<img align="right" alt="Common House Photo" hspace="12" src="/files/inline-images/cch_image001.jpg" style="padding:10px;" width="400">
+![Common House Photo](cch_image001.jpg)
+{.align-right width="400"}
 
 The Common House at Camelot Cohousing is the center of our neighborhood, both physically and socially. It's the place where the community comes together -- for shared meals, for games and entertainment, for meetings, for parties, for hobbies and activities.
 
@@ -27,8 +28,11 @@ The Common House at Camelot Cohousing is the center of our neighborhood, both ph
 
 All residents have full use of the common house. It's like having a luxury recreational facility next door to enjoy with neighbors and friends.
 
-<p align="center"><img alt="Common House Photo" hspace="12" src="/files/inline-images/cch_image002.jpg"><img alt="Common House Photo" hspace="12" src="/files/inline-images/cch_image003.jpg"><img alt="Common House Photo" hspace="12" src="/files/inline-images/cch_image004.jpg"></p>
+![Common House Photo](cch_image002.jpg)
+{.align-center}
 
-<p align="center"><img alt="" height="388" hspace="12" src="/files/cch_1stfloor.gif" width="606"></p>
+![Common House Photo](cch_image003.jpg)
+{.align-center}
 
-<p align="center"><img alt="" height="410" hspace="12" src="/files/cch_basement.gif" width="643"></p>
+![Common House Photo](cch_image004.jpg)
+{.align-center}

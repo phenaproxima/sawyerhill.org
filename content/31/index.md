@@ -32,8 +32,8 @@ Sawyer Hill Ecovillage is two neighborhoods developed by its residents.
 <div class="layout-row">
 <div class="layout-row__media">
 
-<img src="/files/2023-05/aab.jpg" alt="floorplan" width="322" height="459">
-<img src="/files/2023-05/aac.jpg" alt="floorplan" width="326" height="432">
+![floorplan](aab.jpg)
+![floorplan](aac.jpg)
 
 </div>
 <div class="layout-row__body">

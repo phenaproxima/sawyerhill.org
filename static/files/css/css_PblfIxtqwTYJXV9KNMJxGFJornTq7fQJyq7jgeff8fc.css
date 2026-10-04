@@ -1067,3 +1067,22 @@ div.item-list ul.pager li a:hover,
 dt {
   font-weight: bold;
 }
+
+/* Image alignment classes, so content can use Markdown images with
+   {.align-right} etc. instead of raw <img> tags. Mirrors what the old
+   align/hspace attributes did. */
+.align-right {
+  float: right;
+  margin: 0 0 1em 1em;
+}
+
+.align-left {
+  float: left;
+  margin: 0 1em 1em 0;
+}
+
+.align-center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}

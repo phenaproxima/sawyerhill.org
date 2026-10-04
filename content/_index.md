@@ -3,8 +3,6 @@ title = "Welcome"
 type = 'page'
 +++
 
-<img align="right" alt="" src="/files/CommunityRendering-small.jpg" width="450">
-
 Are you looking for a new energy-efficient home in a great neighborhood? Check out our [Homes Available](/forsale) page.
 
 **Our Neighborhoods**
@@ -15,10 +13,10 @@ Are you looking for a new energy-efficient home in a great neighborhood? Check o
 <div class="layout-row">
 <div class="layout-row__media">
 
-<img alt="Camelot Cohousing Common House" src="/files/inline-images/2815583840_8324d5dc07_m_200.jpg" width="340">
-<img alt="Sawyer Hill Road" src="/files/inline-images/aak.sized_200.jpg" width="340">
-<img alt="Sawyer Hill Ecovillage Driveway" src="/files/inline-images/2814766165_339d0e42f4_m_200.jpg" width="340">
-<img alt="Mosaic Commons Homes" src="/files/inline-images/mc33-front-thumb.jpg" width="340">
+<img alt="Camelot Cohousing Common House" src="2815583840_8324d5dc07_m_200.jpg" width="340">
+<img alt="Sawyer Hill Road" src="aak.sized_200.jpg" width="340">
+<img alt="Sawyer Hill Ecovillage Driveway" src="2814766165_339d0e42f4_m_200.jpg" width="340">
+<img alt="Mosaic Commons Homes" src="mc33-front-thumb.jpg" width="340">
 
 </div>
 <div class="layout-row__body">

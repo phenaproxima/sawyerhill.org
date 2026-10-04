@@ -9,6 +9,16 @@ canonifyURLs = true
 [markup.goldmark.renderer]
   unsafe = true
 
+# Allow attribute lists ({.class width="..."}) on the line beneath a
+# block-level Markdown element, so aligned/sized images don't need raw
+# <img> tags. wrapStandAloneImageWithinParagraph puts the attributes on the
+# image itself instead of a wrapping <p>.
+[markup.goldmark.parser.attribute]
+  block = true
+  title = true
+[markup.goldmark.parser]
+  wrapStandAloneImageWithinParagraph = false
+
 # Main navigation, matching the Drupal menu order and labels.
 [menu]
   [[menu.main]]
@@ -47,12 +57,8 @@ canonifyURLs = true
   # paste its ID here (the part after https://formspree.io/f/).
   formspreeFormId = 'YOUR_FORMSPREE_FORM_ID'
 
-# NOTE for anyone editing content/: six images are broken on purpose. They
-# returned 404 on the old live site too, so they show as broken-image icons
-# there and here. They are not a migration bug. To clean them up, delete the
-# <img> tags (don't "fix" the paths):
-#   /files/CommunityRendering-small.jpg   (home page)
-#   /files/fullsite.jpg                   (cohousing.md)
-#   /files/cch_1stfloor.gif, /files/cch_basement.gif   (camelot-commonhouse.md)
-#   mc-ch_basement.gif, mc-ch_first_floor700.gif       (mosaic-commonhouse.md)
+# NOTE for anyone editing content/: six images were broken (404) on the old
+# live site too. Five were removed during migration (their <img> tags deleted);
+# fullsite.jpg was recovered from the live site and now lives in
+# content/cohousing/. If an image looks missing, check the page bundle first.
 

@@ -4,7 +4,7 @@ title = "35 Village Lane - 4BR - Mosaic Commons"
 
 <h2 align="center">4 Bedroom Townhouse with Basement $625,000</h2>
 
-<img alt="Outside view of 35 Village Lane" src="/files/inline-images/35-VillageLane.png">
+![Outside view of 35 Village Lane](35-VillageLane.png)
 
 [See more photos](https://drive.google.com/drive/folders/1mGXyJovZhKbqwyu6uWWSsaBKyVejKT4r?usp=share_link) or [contact info@mosaic-commons.org](mailto:info@mosaic-commons.org) to inquire.
 

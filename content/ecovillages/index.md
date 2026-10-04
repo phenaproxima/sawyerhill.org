@@ -25,8 +25,8 @@ EcoVillages use the latest and best practices related to sustainable development
 </div>
 <div class="layout-row__media">
 
-<img alt="snowy site" src="/files/inline-images/snowysite.jpg">
-<img alt="trees" src="/files/inline-images/trees.jpg">
+![snowy site](snowysite.jpg)
+![trees](trees.jpg)
 
 </div>
 </div>

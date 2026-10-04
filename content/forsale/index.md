@@ -5,7 +5,7 @@ title = "Homes Available"
 <div class="layout-row">
 <div class="layout-row__media">
 
-<img alt="Map of Sawyer Hill" src="/files/inline-images/numbered%20map%20no%20logos_0.png" width="400">
+<img alt="Map of Sawyer Hill" src="numbered%20map%20no%20logos_0.png" width="400">
 
 </div>
 <div class="layout-row__body">
@@ -52,10 +52,10 @@ Exceptions are available based on age, recent displacement, and other circumstan
 </div>
 <div class="layout-row__media">
 
-<img alt="Camelot North" src="/files/inline-images/aaw.thumb_.jpg" width="300">
-<img alt="Mosaic Commons" src="/files/inline-images/abg.thumb_.jpg" width="300">
+<img alt="Camelot North" src="aaw.thumb_.jpg" width="300">
+<img alt="Mosaic Commons" src="abg.thumb_.jpg" width="300">
 
 </div>
 </div>
 
-<img align="left" alt="Equal Housing Opportunity" hspace="5" src="/files/inline-images/eho_logo.gif"> Sawyer Hill is two neighborhoods developed by its members; our goal is community, not profit. We are proud to have built our community and to be offering homes designed to meet our desires and needs far into the future.
+![Equal Housing Opportunity](eho_logo.gif) Sawyer Hill is two neighborhoods developed by its members; our goal is community, not profit. We are proud to have built our community and to be offering homes designed to meet our desires and needs far into the future.

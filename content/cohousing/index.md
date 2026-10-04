@@ -4,7 +4,7 @@ title = "What is Cohousing?"
 
 Cohousing is a type of collaborative housing in which residents actively participate in the design and operation of their own neighborhoods. Cohousing residents are consciously committed to living as a community. The physical design encourages both social contact and individual space. Private homes contain all the features of conventional homes, but residents also have access to common facilities such as open space, courtyards, a playground and a common house.
 
-<a href="/files/fullsite.jpg"><img align="left" alt="site map" src="/files/inline-images/fullsite.jpg" width="300"></a>**The six defining characteristics of cohousing are:**
+<a href="fullsite.jpg"><img align="left" alt="site map" src="fullsite.jpg" width="300"></a>**The six defining characteristics of cohousing are:**
 
 **1. Participatory process.** Future residents participate in the design of the community so that it meets their needs. Some cohousing communities are initiated or driven by a developer. In those cases, if the developer brings the future resident group into the process late in the planning, the residents will have less input into the design. A well-designed, pedestrian-oriented community without significant resident participation in the planning may be "cohousing-inspired," but it is not a cohousing community.
 
@@ -18,4 +18,5 @@ Cohousing is a type of collaborative housing in which residents actively partici
 
 **6. No shared community economy.** The community is not a source of income for its members. Occasionally, a cohousing community will pay one of its residents to do a specific (usually time-limited) task, but more typically the work will be considered that member's contribution to the shared responsibilities. *Reproduced with permission from [www.cohousing.org](http://www.cohousing.org)*
 
-<p align="center"><img alt="Neighborhood" src="/files/inline-images/aaw.jpg"></p>
+![Neighborhood](aaw.jpg)
+{.align-center}
