@@ -1,0 +1,23 @@
+{{ define "head" }}
+<!-- Pagefind is generated at build time by `npx pagefind --site public`. -->
+<link href="/_pagefind/pagefind-ui.css" rel="stylesheet">
+<script src="/_pagefind/pagefind-ui.js"></script>
+{{ end }}
+
+{{ define "main" }}
+<div id="search"></div>
+<script>
+window.addEventListener('DOMContentLoaded', function () {
+  var ui = new PagefindUI({
+    element: '#search',
+    showSubResults: true,
+    showImages: false
+  });
+  // The header search box submits here as ?q=...; feed it into Pagefind.
+  var q = new URLSearchParams(window.location.search).get('q');
+  if (q) {
+    ui.triggerSearch(q);
+  }
+});
+</script>
+{{ end }}
