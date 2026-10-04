@@ -2,11 +2,13 @@
 title = "Homes Available"
 +++
 
-<table>
-<tbody>
-<tr>
-<td valign="top" width="500"><img align="left" alt="Map of Sawyer Hill" src="/files/inline-images/numbered%20map%20no%20logos_0.png" width="400"></td>
-<td valign="top">
+<div class="layout-row">
+<div class="layout-row__media">
+
+<img alt="Map of Sawyer Hill" src="/files/inline-images/numbered%20map%20no%20logos_0.png" width="400">
+
+</div>
+<div class="layout-row__body">
 
 ### For Sale
 
@@ -31,34 +33,29 @@ Buying a house in cohousing is like buying a house with an extra room, but the r
 - 25+ wooded acres in conservation among beautiful hills with orchards and horse farms nearby, yet with easy access to shopping and I-495 and I-290 highways.
 - Reduced living costs through the sharing of resources, whether in the garden, the common house, or elsewhere.
 
-</td>
-</tr>
-</tbody>
-</table>
+</div>
+</div>
 
-<table width="100%">
-<tbody>
-<tr>
-<td valign="top">
+<div class="layout-row">
+<div class="layout-row__body">
 
 #### 40b information
 
 Sawyer Hill EcoVillage, comprised of Mosaic Commons and Camelot Cohousing, was developed as part of the Chapter 40B program, a state program designed to help address the shortage of affordable housing in Massachusetts by encouraging new developments to offer at least 20-25% of the homes at prices affordable by low- and moderate-income buyers. 40B resales are generally restricted to people who meet particular income, savings, and homeownership requirements. Income requirements are generally linked to household size and are around 70% of the area median income.You can find the details of those requirements here:
 
-<ul style="padding-left:35px;">
-<li><a href="http://www.mass.gov/hed/housing/affordable-own/first-time-home-buyer-fthb.html">http://www.mass.gov/hed/housing/affordable-own/first-time-home-buyer-ft…</a></li>
-<li><a href="http://www.mymassmortgage.org/">http://www.mymassmortgage.org/</a></li>
-<li><a href="http://www.massaffordablehomes.org/Default.aspx">http://www.massaffordablehomes.org/Default.aspx</a></li>
-</ul>
+- <http://www.mass.gov/hed/housing/affordable-own/first-time-home-buyer-fthb.html>
+- <http://www.mymassmortgage.org/>
+- <http://www.massaffordablehomes.org/Default.aspx>
 
 Exceptions are available based on age, recent displacement, and other circumstances. If you think you might qualify but aren't sure, or if you are close and might need an exception, please let the home seller know. They may be able to find someone to help you with your application. Occasionally a 40B home is available without restriction on who can buy the home, but will still have restrictions on how the home can be resold. Ask your home seller to clarify the situation for the home. If we have 40b homes for sale, they'll be listed above.
 
-</td>
-<td valign="top" width="310">
-<center><img align="right" alt="Camelot North" hspace="5" src="/files/inline-images/aaw.thumb_.jpg" width="300"> <img alt="Mosaic Commons" hspace="5" src="/files/inline-images/abg.thumb_.jpg" width="300"></center>
-</td>
-</tr>
-</tbody>
-</table>
+</div>
+<div class="layout-row__media">
+
+<img alt="Camelot North" src="/files/inline-images/aaw.thumb_.jpg" width="300">
+<img alt="Mosaic Commons" src="/files/inline-images/abg.thumb_.jpg" width="300">
+
+</div>
+</div>
 
 <img align="left" alt="Equal Housing Opportunity" hspace="5" src="/files/inline-images/eho_logo.gif"> Sawyer Hill is two neighborhoods developed by its members; our goal is community, not profit. We are proud to have built our community and to be offering homes designed to meet our desires and needs far into the future.

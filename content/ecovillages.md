@@ -2,10 +2,8 @@
 title = "EcoVillages"
 +++
 
-<table>
-<tbody>
-<tr>
-<td valign="top">
+<div class="layout-row">
+<div class="layout-row__body">
 
 EcoVillages use the latest and best practices related to sustainable development and land planning principles, including dwelling units typically clustered to reduce development footprint, various forms of shared common facilities, low vehicle use, and emphasis on neighborhood. Projects (typically) include recycling of construction waste materials, green building techniques and use of sustainable materials, preservation of open space for perpetuity.
 
@@ -24,8 +22,11 @@ EcoVillages use the latest and best practices related to sustainable development
 - Includes neighborhood lighting systems that minimize light pollution
 - Designed with enough properly-oriented roof space for a future photovoltaic system
 
-</td>
-<td valign="top"><img alt="snowy site" hspace="5" src="/files/inline-images/snowysite.jpg" vspace="5"> <img alt="trees" hspace="5" src="/files/inline-images/trees.jpg" vspace="5"></td>
-</tr>
-</tbody>
-</table>
+</div>
+<div class="layout-row__media">
+
+<img alt="snowy site" src="/files/inline-images/snowysite.jpg">
+<img alt="trees" src="/files/inline-images/trees.jpg">
+
+</div>
+</div>
