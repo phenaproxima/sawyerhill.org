@@ -5,7 +5,8 @@ title = "Homes Available"
 <div class="layout-row">
 <div class="layout-row__media">
 
-<img alt="Map of Sawyer Hill" src="numbered%20map%20no%20logos_0.png" width="400">
+![Map of Sawyer Hill](numbered%20map%20no%20logos_0.png)
+{width="400"}
 
 </div>
 <div class="layout-row__body">

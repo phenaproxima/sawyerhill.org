@@ -49,7 +49,21 @@
            the main content. -->
       <div id="navband">
         <nav role="navigation" aria-label="Main navigation">
-          <ul class="menu-bart">
+          <!-- Mobile hamburger toggle. aria-expanded and aria-controls are
+               the accessible disclosure pattern; the hidden attribute on
+               the button is removed by JS, so without JavaScript there is
+               no button and the menu simply stays open. -->
+          <button
+            type="button"
+            class="nav-toggle"
+            aria-expanded="false"
+            aria-controls="main-menu"
+            hidden
+          >
+            <span class="nav-toggle-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Menu</span>
+          </button>
+          <ul class="menu-bart" id="main-menu">
             {{ range .Site.Menus.main }}
             <li class="menu-item">
               <a href="{{ .URL | relURL }}">{{ .Name }}</a>
@@ -76,5 +90,25 @@
       </div>
 
     </div> <!-- /#page -->
+
+    <script>
+      // Mobile nav toggle. Progressive enhancement: the button starts
+      // with the hidden attribute, and the menu starts visible. When JS
+      // runs we reveal the button, collapse the menu (via the .js-nav
+      // class on <body>), and wire up the toggle. Without JS nothing
+      // changes and the menu stays open.
+      (function () {
+        var toggle = document.querySelector('.nav-toggle');
+        if (!toggle) {
+          return;
+        }
+        toggle.hidden = false;
+        document.body.classList.add('js-nav');
+        toggle.addEventListener('click', function () {
+          var expanded = toggle.getAttribute('aria-expanded') === 'true';
+          toggle.setAttribute('aria-expanded', String(!expanded));
+        });
+      })();
+    </script>
   </body>
 </html>

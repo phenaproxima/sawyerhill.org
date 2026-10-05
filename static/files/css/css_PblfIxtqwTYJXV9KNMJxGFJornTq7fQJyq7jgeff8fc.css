@@ -371,6 +371,57 @@ input.form-text {
 #navband {
   margin-top: 1rem;
 }
+/* Mobile base: hamburger toggle button. It starts life with the hidden
+   attribute; JS removes that, so without JavaScript there is no button
+   and the menu stays open as a plain list. */
+.nav-toggle {
+  display: flex;
+  align-items: center;
+  /* Big enough to tap comfortably (Apple's 44px guideline). */
+  min-height: 44px;
+  padding: 0 0.9rem;
+  border: 0;
+  border-radius: 0;
+  cursor: pointer;
+  color: #fefefe;
+  background: #a46b34;
+}
+/* The hamburger icon: the span is the middle bar, its two pseudo-
+   elements are the top and bottom bars. */
+.nav-toggle-icon,
+.nav-toggle-icon::before,
+.nav-toggle-icon::after {
+  display: block;
+  width: 22px;
+  height: 2px;
+  background: #fefefe;
+}
+.nav-toggle-icon {
+  position: relative;
+}
+.nav-toggle-icon::before,
+.nav-toggle-icon::after {
+  content: "";
+  position: absolute;
+  left: 0;
+}
+.nav-toggle-icon::before {
+  top: -7px;
+}
+.nav-toggle-icon::after {
+  top: 7px;
+}
+/* When JS is running, the menu is collapsible on mobile: closed unless
+   the button's aria-expanded says otherwise. Without JS the button stays
+   hidden and .js-nav is never added, so the menu stays open. On desktop
+   these are overridden by the min-width: 901px rules below, which always
+   show the menu. */
+.js-nav .menu-bart {
+  display: none;
+}
+.js-nav .nav-toggle[aria-expanded="true"] + .menu-bart {
+  display: block;
+}
 #navband .menu-bart {
   font-size: 1rem;
   margin: 0;
@@ -406,6 +457,11 @@ input.form-text {
   /* Desktop: nav sits in a row, margin matching the page title text. */
   #navband nav {
     padding: 0 2rem;
+  }
+  /* The hamburger is a mobile-only control; the menu is always visible
+     on desktop. */
+  .nav-toggle {
+    display: none;
   }
   #navband .menu-bart {
     /* Items in a row on desktop. */
@@ -578,16 +634,22 @@ a:active {
   color: #ffffff;
 }
 
-/* Modern layout helpers replacing the old layout <table>s. */
+/* Modern layout helpers replacing the old layout <table>s.
+
+   Mobile base: the row stacks vertically, and the text always comes
+   first regardless of where the media sits in the source. On desktop
+   the source order decides left/right, so a page that wants its image
+   on the left (forsale) puts the media div first, and one that wants
+   it on the right (ecovillages) puts it second. */
 .layout-row {
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: column;
   gap: 1em;
-  align-items: flex-start;
 }
 
 .layout-row__media {
-  flex: 0 0 auto;
+  /* On mobile the media drops below the text. */
+  order: 2;
   display: flex;
   flex-direction: column;
 }
@@ -600,8 +662,27 @@ a:active {
 }
 
 .layout-row__body {
-  flex: 1 1 0;
+  /* On mobile the text stays on top. */
+  order: 1;
   min-width: 0;
+}
+
+@media all and (min-width: 901px) {
+  /* Desktop: side by side, in whatever order the source has them. */
+  .layout-row {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+
+  .layout-row__media {
+    order: 0;
+    flex: 0 0 auto;
+  }
+
+  .layout-row__body {
+    order: 0;
+    flex: 1 1 0;
+  }
 }
 
 .layout-row__media.media-grid {
@@ -623,19 +704,39 @@ dt {
 
 /* Image alignment classes, so content can use Markdown images with
    {.align-right} etc. instead of raw <img> tags. Mirrors what the old
-   align/hspace attributes did. */
-.align-right {
-  float: right;
-  margin: 0 0 1em 1em;
-}
+   align/hspace attributes did.
 
+   Below the desktop breakpoint: no floating. A floated image squeezes
+   the text beside it into a thin column that is painful to read, so the
+   image sits on its own line, centered, and never wider than the
+   screen. The float arrives at the same 901px breakpoint as the
+   desktop nav, keeping the two in sync. */
+.align-right,
 .align-left {
-  float: left;
-  margin: 0 1em 1em 0;
+  display: block;
+  float: none;
+  margin: 0 auto 1em;
+  max-width: 100%;
+  height: auto;
 }
 
 .align-center {
   display: block;
   margin-left: auto;
   margin-right: auto;
+}
+
+@media all and (min-width: 901px) {
+  /* Only float images once the desktop layout kicks in: if the viewport
+     is narrow enough to show the hamburger menu, there isn't room for
+     text to wrap comfortably around an image. */
+  .align-right {
+    float: right;
+    margin: 0 0 1em 1em;
+  }
+
+  .align-left {
+    float: left;
+    margin: 0 1em 1em 0;
+  }
 }
