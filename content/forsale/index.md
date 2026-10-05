@@ -6,7 +6,6 @@ title = "Homes Available"
 <div class="layout-row__media">
 
 ![Map of Sawyer Hill](numbered%20map%20no%20logos_0.png)
-{width="400"}
 
 </div>
 <div class="layout-row__body">
@@ -42,19 +41,19 @@ Buying a house in cohousing is like buying a house with an extra room, but the r
 
 #### 40b information
 
-Sawyer Hill EcoVillage, comprised of Mosaic Commons and Camelot Cohousing, was developed as part of the Chapter 40B program, a state program designed to help address the shortage of affordable housing in Massachusetts by encouraging new developments to offer at least 20-25% of the homes at prices affordable by low- and moderate-income buyers. 40B resales are generally restricted to people who meet particular income, savings, and homeownership requirements. Income requirements are generally linked to household size and are around 70% of the area median income.You can find the details of those requirements here:
+Sawyer Hill EcoVillage, comprised of Mosaic Commons and Camelot Cohousing, was developed as part of the Chapter 40B program, a state program designed to help address the shortage of affordable housing in Massachusetts by encouraging new developments to offer at least 20-25% of the homes at prices affordable by low- and moderate-income buyers. 40B resales are generally restricted to people who meet particular income, savings, and homeownership requirements. Income requirements are generally linked to household size and are around 70% of the area median income. You can find the details of those requirements here:
 
-- <//www.mass.gov/hed/housing/affordable-own/first-time-home-buyer-fthb.html>
-- <//www.mymassmortgage.org/>
-- <//www.massaffordablehomes.org/Default.aspx>
+- [ONE Mortgage Program (mass.gov)](https://www.mass.gov/info-details/one-mortgage-program)
+- [My Mass Home](https://www.mymasshome.org/)
 
 Exceptions are available based on age, recent displacement, and other circumstances. If you think you might qualify but aren't sure, or if you are close and might need an exception, please let the home seller know. They may be able to find someone to help you with your application. Occasionally a 40B home is available without restriction on who can buy the home, but will still have restrictions on how the home can be resold. Ask your home seller to clarify the situation for the home. If we have 40b homes for sale, they'll be listed above.
 
 </div>
 <div class="layout-row__media">
 
-<img alt="Camelot North" src="aaw.thumb_.jpg" width="300">
-<img alt="Mosaic Commons" src="abg.thumb_.jpg" width="300">
+![Camelot North](aaw.thumb_.jpg)
+
+![Mosaic Commons](abg.thumb_.jpg)
 
 </div>
 </div>
