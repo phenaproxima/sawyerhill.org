@@ -22,6 +22,10 @@ audio:not([controls]) {
 html {
   -webkit-text-size-adjust: 100%;
   -ms-text-size-adjust: 100%;
+  /* Root size that all rem values follow: 1rem = 18px at default browser
+     settings. A percentage (not px) so the visitor's font-size preference
+     still scales the whole site. */
+  font-size: 112.5%;
 }
 html,
 button,
@@ -34,22 +38,22 @@ body {
   margin: 0;
 }
 h1 {
-  font-size: 2em;
+  font-size: 2rem;
   margin: 0.67em 0;
 }
 #header h1 {
   margin: 0 0;
 }
 h2 {
-  font-size: 1.5em;
+  font-size: 1.5rem;
   margin: 0.83em 0;
 }
 h3 {
-  font-size: 1.17em;
+  font-size: 1.17rem;
   margin: 1em 0;
 }
 h4 {
-  font-size: 1em;
+  font-size: 1rem;
   margin: 1.33em 0;
 }
 abbr[title] {
@@ -122,14 +126,15 @@ body {
   font-family:
     Georgia, "Palatino Linotype", "Book Antiqua", "URW Palladio L", Baskerville,
     serif;
-  line-height: 1.5em;
-  font-size: 87.5%;
+  /* 1rem matches the root size: 18px at default browser settings. */
+  font-size: 1rem;
+  line-height: 1.8;
 }
 ul {
   margin: 0;
   padding: 0;
   list-style-type: disc;
-  margin-left: 10px;
+  margin-left: 0.55rem;
 }
 a {
   text-decoration: none;
@@ -146,23 +151,23 @@ p,
 li,
 dl,
 dt {
-  margin: 6px 0;
-  line-height: 1.5em;
+  margin: 0.35rem 0;
+  line-height: 1.8;
 }
 dd {
-  margin-left: 2.5em;
+  margin-left: 2.5rem;
 }
 h1 {
-  font-size: 1.4em;
+  font-size: 1.6rem;
 }
 h2 {
-  font-size: 1.3em;
+  font-size: 1.45rem;
 }
 h3 {
-  font-size: 1.2em;
+  font-size: 1.3rem;
 }
 h4 {
-  font-size: 1.15em;
+  font-size: 1.2rem;
 }
 #site-name,
 #site-slogan {
@@ -174,8 +179,8 @@ h4 {
   margin: 0px auto;
   padding: 0px;
   max-width: 100%;
-  margin-top: 15px;
-  margin-bottom: 15px;
+  margin-top: 0.85rem;
+  margin-bottom: 0.85rem;
 }
 #page {
   padding: 0px;
@@ -200,22 +205,21 @@ h4 {
   float: left;
 }
 .column-block {
-  padding: 10px;
-  margin: 0px 5px 5px 5px;
-  text-align: left;
+  padding: 0.55rem;
   margin: 0px;
+  text-align: left;
 }
 div.column-blocks div.column-block {
-  margin-left: 5px;
-  margin-right: 5px;
+  margin-left: 0.3rem;
+  margin-right: 0.3rem;
 }
 div.column-blocks div:last-of-type div.column-block {
-  margin-left: 5px;
+  margin-left: 0.3rem;
   margin-right: 0px;
 }
 div.column-blocks div:first-of-type div.column-block {
   margin-left: 0px;
-  margin-right: 5px;
+  margin-right: 0.3rem;
 }
 div.column-blocks div:only-child div.column-block {
   margin-left: 0px;
@@ -232,10 +236,6 @@ div.column-blocks div:only-child div.column-block {
   -moz-border-radius: 8px;
   -webkit-border-radius: 8px;
   border-radius: 8px;
-}
-.spacer {
-  display: block;
-  margin-top: 10px;
 }
 #header {
   padding: 0px;
@@ -265,56 +265,56 @@ div#site_logo {
 #header h1 a:visited {
   font-weight: 800;
   text-decoration: none;
-  line-height: 1em;
-  font-size: 2em;
+  line-height: 1;
+  font-size: 2.25rem;
 }
 #site-slogan {
   font-weight: normal;
   font-style: italic;
-  margin-bottom: 5px;
-  margin-top: 10px;
-  font-size: 25px;
+  margin-bottom: 0.3rem;
+  margin-top: 0.55rem;
+  font-size: 1.4rem;
 }
 .column-block {
-  font-size: 0.9em;
+  font-size: 1rem;
   margin: 0px;
   border-style: solid;
   border-width: 1px;
 }
 .column-block h2 {
-  font-size: 1.25em;
-  line-height: 1em;
-  padding: 2px 0px;
-  margin: 0px 0px 3px 0px;
+  font-size: 1.35rem;
+  line-height: 1.2;
+  padding: 0.1rem 0;
+  margin: 0 0 0.15rem 0;
   border-bottom-style: solid;
   border-bottom-width: 1px;
 }
 .column-block h2,
 .sidebar h2 {
   background: transparent;
-  line-height: 1em;
+  line-height: 1.2;
   border-bottom-style: solid;
   border-bottom-width: 1px;
-  margin: 4px 0px 2px 0px;
-  padding: 2px 0px;
-  font-size: 1.25em;
+  margin: 0.2rem 0 0.1rem 0;
+  padding: 0.1rem 0;
+  font-size: 1.35rem;
 }
 .column-block .content,
 .sidebar .block .content {
-  padding: 5px 2px;
+  padding: 0.3rem 0.1rem;
 }
 [dir="rtl"] .breadcrumb ol {
   margin-right: 0;
 }
 .page-title {
-  padding: 10px;
-  font-size: 1.3em;
-  margin-bottom: 10px;
-  margin-top: 0px;
+  padding: 0.55rem;
+  font-size: 1.45rem;
+  margin-bottom: 0.55rem;
+  margin-top: 1px;
 }
 #content .block h2 {
-  padding: 5px;
-  font-size: 1.25em;
+  padding: 0.3rem;
+  font-size: 1.35rem;
 }
 @media screen and (min-width: 37.5em) {
   [dir="rtl"] .tabs ul.primary li {
@@ -335,8 +335,8 @@ div#site_logo {
 }
 .node {
   margin: 0;
-  padding: 15px 12px 10px 14px;
-  margin-bottom: 10px;
+  padding: 0.85rem 0.65rem 0.55rem 0.8rem;
+  margin-bottom: 0.55rem;
   border-style: solid;
   border-width: 1px;
 }
@@ -345,11 +345,11 @@ div#site_logo {
   background: transparent;
   border-bottom-style: solid;
   border-bottom-width: 1px;
-  font-size: 1.45em;
+  font-size: 1.5rem;
 }
 .node ul,
 .node ol {
-  padding-left: 15px;
+  padding-left: 1rem;
 }
 input[type="search"] {
   height: 24px;
@@ -377,7 +377,7 @@ button,
   padding: 2px 10px;
   color: #555555;
   cursor: pointer;
-  font-size: 0.9em;
+  font-size: 1rem;
   border: solid 1px #888888;
   background: #fff url(/themes/custom/mayo/images/button.gif) repeat-x center;
 }
@@ -466,20 +466,20 @@ label {
   #site-name a:link,
   #site-name a:visited {
     margin: 0 0;
-    font-size: 0.85em;
+    font-size: 1.2rem;
     font-weight: 600;
-    line-height: 1em;
+    line-height: 1;
   }
   #header h1 a,
   #header h1 a:link,
   #header h1 a:visited {
-    font-size: 0.85em;
+    font-size: 1.2rem;
     font-weight: 800;
-    line-height: 1em;
+    line-height: 1;
     text-decoration: none;
   }
   #site-slogan {
-    font-size: 12px;
+    font-size: 0.85rem;
   }
 }
 @media only screen and (min-width: 321px) and (max-width: 480px) {
@@ -496,20 +496,20 @@ label {
   #site-name a:link,
   #site-name a:visited {
     margin: 0 0;
-    font-size: 1.2em;
+    font-size: 1.5rem;
     font-weight: 800;
-    line-height: 1em;
+    line-height: 1;
   }
   #header h1 a,
   #header h1 a:link,
   #header h1 a:visited {
-    font-size: 0.85em;
+    font-size: 1.2rem;
     font-weight: 800;
-    line-height: 1em;
+    line-height: 1;
     text-decoration: none;
   }
   #site-slogan {
-    font-size: 12px;
+    font-size: 0.85rem;
   }
 }
 @media only screen and (min-width: 481px) and (max-width: 768px) {
@@ -526,16 +526,16 @@ label {
   #site-name a:link,
   #site-name a:visited {
     margin: 0 0;
-    font-size: 1.8em;
+    font-size: 1.8rem;
     font-weight: 800;
-    line-height: 1em;
+    line-height: 1;
   }
   #header h1 a,
   #header h1 a:link,
   #header h1 a:visited {
-    font-size: 1.3em;
+    font-size: 1.4rem;
     font-weight: 800;
-    line-height: 1em;
+    line-height: 1;
     text-decoration: none;
   }
 }
@@ -548,38 +548,38 @@ label {
   }
   input.form-text {
     width: 75%;
-    font-size: 90%;
   }
   #site-name a,
   #site-name a:link,
   #site-name a:visited {
     margin: 0 0;
-    font-size: 2.2em;
+    font-size: 2rem;
     font-weight: 800;
-    line-height: 1em;
+    line-height: 1;
   }
   #header h1 a,
   #header h1 a:link,
   #header h1 a:visited {
-    font-size: 1.6em;
+    font-size: 1.6rem;
     font-weight: 800;
-    line-height: 1em;
+    line-height: 1;
     text-decoration: none;
   }
 }
 .region-menubar {
   clear: both;
+  margin-top: 1rem;
 }
 .region-menubar .menu-bart {
-  font-size: 0.929em;
-  margin: 0 5px;
+  font-size: 1rem;
+  margin: 0 0.3rem;
   padding: 0;
   text-align: left;
 }
 [dir="rtl"] .region-menubar .menu-bart {
   text-align: right;
-  margin-left: 5px;
-  margin-right: 5px;
+  margin-left: 0.3rem;
+  margin-right: 0.3rem;
 }
 .region-menubar .menu-item {
   float: none;
@@ -597,18 +597,19 @@ label {
   text-decoration: none;
   text-shadow: 0 1px #eee;
   border-radius: 8px;
-  margin: 4px 0;
-  padding: 0.9em 0 0.9em 10px;
+  margin: 0.2rem 0;
+  padding: 0.9em 0 0.9em 0.55rem;
+  transition: background-color 0.2s ease-in-out;
 }
 [dir="rtl"] .region-menubar .menu-bart a {
-  padding: 0.9em 10px 0.9em 0;
+  padding: 0.9em 0.55rem 0.9em 0;
 }
 .region-menubar .menu-bart a:hover,
 .region-menubar .menu-bart a:focus {
-  text-decoration: underline;
+  background: #7d5027;
 }
 .region-menubar .menu-bart a:active {
-  background: #536d88;
+  background: #6b4520;
 }
 .menu-toggle,
 .menu-toggle-target {
@@ -627,7 +628,7 @@ body:not(:target) .region-menubar .menu-toggle {
   background: #ccc;
   background: rgba(255, 255, 255, 0.7);
   float: none;
-  font-size: 0.929em;
+  font-size: 1rem;
   display: block;
   text-decoration: none;
   text-shadow: 0 1px #eee;
@@ -675,7 +676,7 @@ body:not(:target)
 }
 @media all and (min-width: 461px) and (max-width: 900px) {
   .region-menubar .menu-bart {
-    margin: 0 5px;
+    margin: 0 0.3rem;
     padding: 0;
     text-align: center;
   }
@@ -685,7 +686,7 @@ body:not(:target)
   .region-menubar .menu-item,
   body:not(:target) .region-menubar .menu-item {
     float: left;
-    margin-right: 5px;
+    margin-right: 0.3rem;
     padding: 0;
     display: inline-block;
     width: 32.75%;
@@ -695,26 +696,26 @@ body:not(:target)
   [dir="rtl"] .region-menubar .menu-item,
   [dir="rtl"] body:not(:target) .region-menubar .menu-item {
     float: right;
-    margin-left: 5px;
+    margin-left: 0.3rem;
     margin-right: 0;
   }
   .region-menubar .menu-item:nth-child(3n) {
-    margin-right: -5px;
+    margin-right: -0.3rem;
   }
   [dir="rtl"] .region-menubar .menu-item:nth-child(3n) {
-    margin-left: -5px;
+    margin-left: -0.3rem;
     margin-right: 0;
   }
   .region-menubar .menu-bart a {
     float: none;
     display: block;
     border-radius: 8px;
-    margin-bottom: 5px;
-    padding: 0.9em 5px;
-    font-size: 1.1em;
+    margin-bottom: 0.3rem;
+    padding: 0.9em 0.3rem;
+    font-size: 1.1rem;
   }
   [dir="rtl"] .region-menubar .menu-bart a {
-    padding: 0.9em 5px;
+    padding: 0.9em 0.3rem;
   }
   body:not(:target) .region-menubar .menu-toggle {
     display: none;
@@ -722,9 +723,9 @@ body:not(:target)
 }
 @media all and (min-width: 901px) {
   .region-menubar .block-menu .menu-bart {
-    font-size: 0.929em;
+    font-size: 1rem;
     margin: 0;
-    padding: 0 15px;
+    padding: 0 0.85rem;
   }
   .region-menubar .menu-item,
   body:not(:target) .region-menubar .menu-item {
@@ -746,7 +747,7 @@ body:not(:target)
     margin-bottom: 0;
     border-bottom-left-radius: 0;
     border-bottom-right-radius: 0;
-    font-size: 1.15em;
+    font-size: 1.1rem;
   }
   [dir="rtl"] .region-menubar .menu-bart a {
     float: right;
@@ -767,14 +768,6 @@ body:not(:target)
 .menu-item {
   padding-top: 0.2em;
   margin: 0;
-}
-[dir="rtl"] .book-pager__item--previous {
-  float: right;
-  text-align: right;
-}
-[dir="rtl"] .book-pager__item--next {
-  float: left;
-  text-align: left;
 }
 form {
   margin: 0;
@@ -804,12 +797,13 @@ input {
 }
 input,
 textarea {
-  font-size: 0.929em;
+  /* 16px minimum so iOS Safari doesn't zoom in on focus. */
+  font-size: 0.9rem;
 }
 @media screen and (max-width: 60em) {
   input,
   textarea {
-    font-size: 16px;
+    font-size: 1rem;
   }
 }
 textarea {
@@ -841,7 +835,7 @@ input.form-submit:focus {
   margin-left: 0;
 }
 .form-item label {
-  font-size: 0.929em;
+  font-size: 1rem;
 }
 [dir="rtl"] .form-type-radio label,
 [dir="rtl"] .form-type-checkbox label {
@@ -964,10 +958,6 @@ a:active {
 #menubar ul li {
   border-right-color: #a46b34;
   color: #3b3b3b;
-}
-div.item-list ul.pager li a:hover,
-#menubar ul li a:hover {
-  background-color: #dddddd;
 }
 .page-title {
   background-color: #a46b34;
