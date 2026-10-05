@@ -1,5 +1,6 @@
 +++
 title = "35 Village Lane - 4BR - Mosaic Commons"
+draft = true
 +++
 
 <h2 align="center">4 Bedroom Townhouse with Basement $625,000</h2>

@@ -1,5 +1,6 @@
 +++
 title = "31 Village Lane - $450,000 - 2 bedroom townhouse FSBO"
+draft = true
 +++
 
 <h2>Contact Zach <a href="mailto:zallen0042@gmail.com">zallen0042@gmail.com</a> for a home tour and <a href="mailto:info@mosaic-commons.org">info@mosaic-commons.org</a> for a community tour.</h2>

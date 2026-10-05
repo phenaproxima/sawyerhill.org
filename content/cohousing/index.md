@@ -16,7 +16,7 @@ Cohousing is a type of collaborative housing in which residents actively partici
 
 **5. Non-hierarchical structure and decision-making.** Leadership roles naturally exist in cohousing communities, however no one person (or persons) has authority over others. Most groups start with one or two "burning souls." As people join the group, each person takes on one or more roles consistent with his or her skills, abilities or interests. Most cohousing groups make all of their decisions by consensus, and, although many groups have a policy for voting if the group cannot reach consensus after a number of attempts, it is rarely or never necessary to resort to voting.
 
-**6. No shared community economy.** The community is not a source of income for its members. Occasionally, a cohousing community will pay one of its residents to do a specific (usually time-limited) task, but more typically the work will be considered that member's contribution to the shared responsibilities. *Reproduced with permission from [www.cohousing.org](http://www.cohousing.org)*
+**6. No shared community economy.** The community is not a source of income for its members. Occasionally, a cohousing community will pay one of its residents to do a specific (usually time-limited) task, but more typically the work will be considered that member's contribution to the shared responsibilities. *Reproduced with permission from [www.cohousing.org](//www.cohousing.org)*
 
 ![Neighborhood](aaw.jpg)
 {.align-center}

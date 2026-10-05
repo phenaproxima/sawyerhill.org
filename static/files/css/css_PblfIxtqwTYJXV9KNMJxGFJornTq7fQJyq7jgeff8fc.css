@@ -176,88 +176,57 @@ h4 {
     serif;
 }
 #page-wrapper {
-  margin: 0px auto;
-  padding: 0px;
-  max-width: 100%;
-  margin-top: 0.85rem;
-  margin-bottom: 0.85rem;
+  margin: 0;
+  padding: 0;
 }
 #page {
-  padding: 0px;
+  padding: 0;
 }
 #main-wrapper {
   width: 100%;
   position: relative;
 }
-#content,
-#sidebar-first,
-#sidebar-second {
-  display: inline;
-  float: left;
-  position: relative;
+#content {
+  /* Content column: centered with breathing room on each side, full
+     width on small screens. */
+  max-width: 75rem;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+  box-sizing: border-box;
 }
-#top-columns,
-#bottom-columns {
-  width: 100%;
-  overflow: hidden;
-}
-.column-block-wrapper {
-  float: left;
-}
-.column-block {
-  padding: 0.55rem;
-  margin: 0px;
-  text-align: left;
-}
-div.column-blocks div.column-block {
-  margin-left: 0.3rem;
-  margin-right: 0.3rem;
-}
-div.column-blocks div:last-of-type div.column-block {
-  margin-left: 0.3rem;
-  margin-right: 0px;
-}
-div.column-blocks div:first-of-type div.column-block {
-  margin-left: 0px;
-  margin-right: 0.3rem;
-}
-div.column-blocks div:only-child div.column-block {
-  margin-left: 0px;
-  margin-right: 0px;
-}
-.rc-2 .comment,
-.rc-2 .node,
-.rc-1 .column-block,
-.rc-1 .sidebar .block,
-.rc-3 .comment,
-.rc-3 .node,
-.rc-3 .column-block,
-.rc-3 .sidebar .block {
-  -moz-border-radius: 8px;
-  -webkit-border-radius: 8px;
+.node {
   border-radius: 8px;
 }
 #header {
   padding: 0px;
   display: block;
   border-style: solid;
-  border-width: 1px;
+  border-width: 0 0 1px 0;
   overflow: hidden;
 }
 #header-watermark {
   margin: 0;
-  padding: 0;
-  background-image: none;
+  /* Soft white glow over the header's linear gradient. Replaces the old
+     pat-6.png watermark image, saving a request. */
+  background-image: radial-gradient(
+    ellipse 55% 130% at 50% 30%,
+    rgba(255, 255, 255, 0.45),
+    rgba(255, 255, 255, 0) 70%
+  );
   background-repeat: no-repeat;
   background-position: top center;
+  /* Mobile base: the search box wraps onto its own full-width row beneath
+     the site name and slogan. */
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  padding: 1.25rem;
 }
 div#site_logo {
-  float: left;
-  padding: 4px 4px 4px 9px;
+  padding-right: 1.5rem;
 }
 #name-and-slogan {
-  float: left;
-  padding: 50px 8px 8px 20px;
+  padding: 0;
 }
 #site-name a,
 #header h1 a,
@@ -266,72 +235,31 @@ div#site_logo {
   font-weight: 800;
   text-decoration: none;
   line-height: 1;
-  font-size: 2.25rem;
+  font-size: 1.5rem;
 }
 #site-slogan {
   font-weight: normal;
   font-style: italic;
   margin-bottom: 0.3rem;
   margin-top: 0.55rem;
-  font-size: 1.4rem;
-}
-.column-block {
-  font-size: 1rem;
-  margin: 0px;
-  border-style: solid;
-  border-width: 1px;
-}
-.column-block h2 {
-  font-size: 1.35rem;
-  line-height: 1.2;
-  padding: 0.1rem 0;
-  margin: 0 0 0.15rem 0;
-  border-bottom-style: solid;
-  border-bottom-width: 1px;
-}
-.column-block h2,
-.sidebar h2 {
-  background: transparent;
-  line-height: 1.2;
-  border-bottom-style: solid;
-  border-bottom-width: 1px;
-  margin: 0.2rem 0 0.1rem 0;
-  padding: 0.1rem 0;
-  font-size: 1.35rem;
-}
-.column-block .content,
-.sidebar .block .content {
-  padding: 0.3rem 0.1rem;
-}
-[dir="rtl"] .breadcrumb ol {
-  margin-right: 0;
+  font-size: 0.85rem;
 }
 .page-title {
-  padding: 0.55rem;
+  /* Full-width bar; text sits a comfortable margin from the edges,
+     matching the nav above it. */
+  padding: 0.55rem 2rem;
   font-size: 1.45rem;
-  margin-bottom: 0.55rem;
-  margin-top: 1px;
+  margin: 0 0 0.55rem 0;
+}
+@media only screen and (min-width: 768px) {
+  .page-title {
+    /* A sliver of air so the nav doesn't look welded to the title bar. */
+    margin-top: 2px;
+  }
 }
 #content .block h2 {
   padding: 0.3rem;
   font-size: 1.35rem;
-}
-@media screen and (min-width: 37.5em) {
-  [dir="rtl"] .tabs ul.primary li {
-    float: right;
-    margin: 0 0 0 5px;
-  }
-}
-[dir="rtl"] .tabs ul.secondary li {
-  border-left: 1px solid #ccc;
-  border-right: medium none;
-  float: right;
-}
-[dir="rtl"] .tabs ul.secondary li:last-child {
-  border-left: medium none;
-}
-[dir="rtl"] .tabs ul.secondary li:first-child {
-  padding-right: 0;
 }
 .node {
   margin: 0;
@@ -351,8 +279,11 @@ div#site_logo {
 .node ol {
   padding-left: 1rem;
 }
-input[type="search"] {
+/* ID selector so this beats the generic input.form-text width below. */
+#header-searchbox input[type="search"] {
   height: 24px;
+  /* Mobile base: fill the search box's full-width row. */
+  width: 100%;
   color: #555555;
   margin: 0px;
   border: solid 1px #aaa;
@@ -363,12 +294,38 @@ input[type="search"] {
     center;
   padding: 0px 4px 0px 4px;
   padding-left: 24px;
+  box-sizing: border-box;
+  max-width: 100%;
 }
 #header-searchbox {
-  float: right;
-  overflow: hidden;
-  padding: 8px;
-  margin: 0px;
+  /* Mobile base: own row beneath the site name, full width. */
+  width: 100%;
+  padding: 0.75rem 0 0 0;
+}
+@media only screen and (min-width: 768px) {
+  /* Tablet and up: everything on one row, search pinned to the far end. */
+  #header-watermark {
+    flex-wrap: nowrap;
+    padding: 2rem 2.5rem;
+  }
+  #site-name a,
+  #header h1 a,
+  #header h1 a:link,
+  #header h1 a:visited {
+    font-size: 2.25rem;
+  }
+  #site-slogan {
+    font-size: 1.4rem;
+  }
+  #header-searchbox {
+    width: auto;
+    margin-left: auto;
+    align-self: flex-start;
+    padding: 8px;
+  }
+  #header-searchbox input[type="search"] {
+    width: 13rem;
+  }
 }
 .pushbutton,
 button,
@@ -392,378 +349,84 @@ label {
   display: block;
   font-weight: bold;
 }
-[dir="rtl"] .field--label-inline .field__label,
-[dir="rtl"] .field--label-inline .field__items {
-  padding-left: 0.5em;
-  padding-right: 0;
-}
-[dir="rtl"] .file {
-  background-position: right center;
-  padding-left: inherit;
-  padding-right: 20px;
-}
-[dir="rtl"] .messages {
-  background-position: right 10px top 17px;
-  border-width: 1px 0 1px 1px;
-  padding-left: 20px;
-  padding-right: 35px;
-  text-align: right;
-}
-[dir="rtl"] .messages--status {
-  border-color: #c9e1bd transparent #c9e1bd #c9e1bd;
-  box-shadow: 8px 0 0 #77b259;
-  margin-left: 0;
-}
-[dir="rtl"] .messages--warning {
-  border-color: #f4daa6 transparent #f4daa6 #f4daa6;
-  box-shadow: 8px 0 0 #e09600;
-}
-[dir="rtl"] .messages--error {
-  border-color: #f9c9bf transparent #f9c9bf #f9c9bf;
-  box-shadow: 8px 0 0 #e62600;
-}
-#main-wrapper {
-  width: 100%;
-  position: relative;
-}
-#main {
-  width: 100%;
-}
-@media only screen and (max-width: 320px) {
-  #top-columns .column-block-wrapper,
-  #bottom-columns .column-block-wrapper,
-  #footer-columns .column-block-wrapper {
-    width: 100% !important;
-    margin-top: 1em;
-  }
-  #top-columns .column-block-wrapper .column-block,
-  #bottom-columns .column-block-wrapper .column-block,
-  #footer-columns .column-block-wrapper .column-block {
-    height: auto !important;
-    margin: 0 !important;
-  }
-}
-#content,
-#sidebar-first,
-#sidebar-second {
+#content {
   margin: 0;
   width: 100%;
 }
-#content img,
-#sidebar-first img,
-#sidebar-second img {
+#content img {
   max-width: 100%;
   height: auto;
 }
-@media only screen and (max-width: 320px) {
-  #content img,
-  #sidebar-first img,
-  #sidebar-second img {
-    max-width: 100%;
-    height: auto;
-  }
-  #site-name a,
-  #site-name a:link,
-  #site-name a:visited {
-    margin: 0 0;
-    font-size: 1.2rem;
-    font-weight: 600;
-    line-height: 1;
-  }
-  #header h1 a,
-  #header h1 a:link,
-  #header h1 a:visited {
-    font-size: 1.2rem;
-    font-weight: 800;
-    line-height: 1;
-    text-decoration: none;
-  }
-  #site-slogan {
-    font-size: 0.85rem;
-  }
+input.form-text {
+  /* Mobile base: nearly full width so fields are easy to tap. */
+  width: 95%;
 }
-@media only screen and (min-width: 321px) and (max-width: 480px) {
-  #content img,
-  #sidebar-first img,
-  #sidebar-second img {
-    max-width: 100%;
-    height: auto;
-  }
-  input.form-text {
-    width: 95%;
-  }
-  #site-name a,
-  #site-name a:link,
-  #site-name a:visited {
-    margin: 0 0;
-    font-size: 1.5rem;
-    font-weight: 800;
-    line-height: 1;
-  }
-  #header h1 a,
-  #header h1 a:link,
-  #header h1 a:visited {
-    font-size: 1.2rem;
-    font-weight: 800;
-    line-height: 1;
-    text-decoration: none;
-  }
-  #site-slogan {
-    font-size: 0.85rem;
-  }
-}
-@media only screen and (min-width: 481px) and (max-width: 768px) {
-  #content img,
-  #sidebar-first img,
-  #sidebar-second img {
-    max-width: 100%;
-    height: auto;
-  }
+@media only screen and (min-width: 768px) {
   input.form-text {
     width: 75%;
   }
-  #site-name a,
-  #site-name a:link,
-  #site-name a:visited {
-    margin: 0 0;
-    font-size: 1.8rem;
-    font-weight: 800;
-    line-height: 1;
-  }
-  #header h1 a,
-  #header h1 a:link,
-  #header h1 a:visited {
-    font-size: 1.4rem;
-    font-weight: 800;
-    line-height: 1;
-    text-decoration: none;
-  }
 }
-@media only screen and (min-width: 769px) and (max-width: 1024px) {
-  #content img,
-  #sidebar-first img,
-  #sidebar-second img {
-    max-width: 100%;
-    height: auto;
-  }
-  input.form-text {
-    width: 75%;
-  }
-  #site-name a,
-  #site-name a:link,
-  #site-name a:visited {
-    margin: 0 0;
-    font-size: 2rem;
-    font-weight: 800;
-    line-height: 1;
-  }
-  #header h1 a,
-  #header h1 a:link,
-  #header h1 a:visited {
-    font-size: 1.6rem;
-    font-weight: 800;
-    line-height: 1;
-    text-decoration: none;
-  }
-}
-.region-menubar {
-  clear: both;
+/* Nav and page title band, sitting between the header banner and the
+   main content. */
+#navband {
   margin-top: 1rem;
 }
-.region-menubar .menu-bart {
+#navband .menu-bart {
   font-size: 1rem;
-  margin: 0 0.3rem;
-  padding: 0;
-  text-align: left;
-}
-[dir="rtl"] .region-menubar .menu-bart {
-  text-align: right;
-  margin-left: 0.3rem;
-  margin-right: 0.3rem;
-}
-.region-menubar .menu-item {
-  float: none;
-  list-style: none;
   margin: 0;
   padding: 0;
-  height: auto;
-  width: 100%;
+  text-align: left;
+  list-style: none;
 }
-.region-menubar .menu-bart a {
+#navband .menu-item {
+  margin: 0;
+  padding: 0;
+}
+#navband .menu-bart a {
   color: #fefefe;
   background: #a46b34;
-  float: none;
   display: block;
   text-decoration: none;
   text-shadow: 0 1px #eee;
-  border-radius: 8px;
+  /* Mobile base: square edges; the radius arrives with the tab look
+     at the desktop breakpoint below. */
+  border-radius: 0;
   margin: 0.2rem 0;
   padding: 0.9em 0 0.9em 0.55rem;
   transition: background-color 0.2s ease-in-out;
 }
-[dir="rtl"] .region-menubar .menu-bart a {
-  padding: 0.9em 0.55rem 0.9em 0;
-}
-.region-menubar .menu-bart a:hover,
-.region-menubar .menu-bart a:focus {
+#navband .menu-bart a:hover,
+#navband .menu-bart a:focus {
   background: #7d5027;
 }
-.region-menubar .menu-bart a:active {
+#navband .menu-bart a:active {
   background: #6b4520;
 }
-.menu-toggle,
-.menu-toggle-target {
-  display: none;
-}
-.region-menubar .menu-toggle-target {
-  display: inherit;
-  position: fixed;
-  top: 0;
-}
-.region-menubar .menu-toggle {
-  display: none;
-}
-body:not(:target) .region-menubar .menu-toggle {
-  color: blue;
-  background: #ccc;
-  background: rgba(255, 255, 255, 0.7);
-  float: none;
-  font-size: 1rem;
-  display: block;
-  text-decoration: none;
-  text-shadow: 0 1px #eee;
-  padding: 0.9em 10px 0.9em 10px;
-  z-index: 1000;
-}
-body:not(:target) .region-menubar .menu-toggle:after {
-  content: "";
-  background: url(/themes/custom/mayo/images/icons/hamburger.svg) no-repeat;
-  background-size: contain;
-  width: 22px;
-  height: 22px;
-  display: inline-block;
-  position: absolute;
-  right: 10px;
-}
-[dir="rtl"] body:not(:target) .region-menubar .menu-toggle:after {
-  right: initial;
-  left: 10px;
-}
-body:not(:target)
-  .region-menubar
-  .menu-toggle-target-show:target
-  ~ .menu-toggle,
-body:not(:target) .region-menubar .menu-toggle--hide {
-  display: none;
-}
-body:not(:target)
-  .region-menubar
-  .menu-toggle-target-show:target
-  ~ .menu-toggle--hide {
-  display: block;
-}
-body:not(:target) .region-menubar .menu-item {
-  height: 0;
-  overflow: hidden;
-}
-body:not(:target)
-  .region-menubar
-  .menu-toggle-target-show:target
-  ~ .menu-bart
-  .menu-item {
-  height: auto;
-  overflow: visible;
-}
-@media all and (min-width: 461px) and (max-width: 900px) {
-  .region-menubar .menu-bart {
-    margin: 0 0.3rem;
-    padding: 0;
-    text-align: center;
-  }
-  [dir="rtl"] .region-menubar .menu-bart {
-    text-align: center;
-  }
-  .region-menubar .menu-item,
-  body:not(:target) .region-menubar .menu-item {
-    float: left;
-    margin-right: 0.3rem;
-    padding: 0;
-    display: inline-block;
-    width: 32.75%;
-    height: auto;
-    overflow: visible;
-  }
-  [dir="rtl"] .region-menubar .menu-item,
-  [dir="rtl"] body:not(:target) .region-menubar .menu-item {
-    float: right;
-    margin-left: 0.3rem;
-    margin-right: 0;
-  }
-  .region-menubar .menu-item:nth-child(3n) {
-    margin-right: -0.3rem;
-  }
-  [dir="rtl"] .region-menubar .menu-item:nth-child(3n) {
-    margin-left: -0.3rem;
-    margin-right: 0;
-  }
-  .region-menubar .menu-bart a {
-    float: none;
-    display: block;
-    border-radius: 8px;
-    margin-bottom: 0.3rem;
-    padding: 0.9em 0.3rem;
-    font-size: 1.1rem;
-  }
-  [dir="rtl"] .region-menubar .menu-bart a {
-    padding: 0.9em 0.3rem;
-  }
-  body:not(:target) .region-menubar .menu-toggle {
-    display: none;
-  }
-}
 @media all and (min-width: 901px) {
-  .region-menubar .block-menu .menu-bart {
-    font-size: 1rem;
-    margin: 0;
-    padding: 0 0.85rem;
+  /* Desktop: nav sits in a row, margin matching the page title text. */
+  #navband nav {
+    padding: 0 2rem;
   }
-  .region-menubar .menu-item,
-  body:not(:target) .region-menubar .menu-item {
-    float: left;
-    list-style: none;
-    padding: 0 1px;
-    margin: 0 1px;
-    width: auto;
-    height: auto;
-    overflow: visible;
+  #navband .menu-bart {
+    /* Items in a row on desktop. */
+    display: flex;
   }
-  [dir="rtl"] .region-menubar .menu-item,
-  [dir="rtl"] body:not(:target) .region-menubar .menu-item {
-    float: right;
+  #navband .menu-item {
+    margin: 0 2px 0 0;
   }
-  .region-menubar .menu-bart a {
-    float: left;
+  #navband .menu-item:first-child {
+    /* Optically line the first item up with the page title text below. */
+    margin-left: -1em;
+  }
+  #navband .menu-bart a {
     padding: 0.7em 1em;
     margin-bottom: 0;
+    /* Tabs: rounded on top, flush with the title bar on the bottom. */
+    border-radius: 8px;
     border-bottom-left-radius: 0;
     border-bottom-right-radius: 0;
     font-size: 1.1rem;
   }
-  [dir="rtl"] .region-menubar .menu-bart a {
-    float: right;
-    padding: 0.7em 0.8em;
-  }
-  body:not(:target) .region-menubar .menu-toggle {
-    display: none;
-  }
-}
-[dir="rtl"] ul.menu {
-  margin-left: 0;
-  margin-right: 1em;
-  text-align: right;
-}
-[dir="rtl"] .menu-item--collapsed {
-  list-style-image: url(/themes/custom/mayo/images/menu-collapsed-rtl.png);
 }
 .menu-item {
   padding-top: 0.2em;
@@ -772,10 +435,6 @@ body:not(:target)
 form {
   margin: 0;
   padding: 0;
-}
-[dir="rtl"] .filter-wrapper .form-item label {
-  margin-left: 10px;
-  margin-right: 0;
 }
 label {
   display: table;
@@ -797,13 +456,13 @@ input {
 }
 input,
 textarea {
-  /* 16px minimum so iOS Safari doesn't zoom in on focus. */
-  font-size: 0.9rem;
+  /* Mobile base: 1rem (18px here) so iOS Safari doesn't zoom in on focus. */
+  font-size: 1rem;
 }
-@media screen and (max-width: 60em) {
+@media only screen and (min-width: 768px) {
   input,
   textarea {
-    font-size: 1rem;
+    font-size: 0.9rem;
   }
 }
 textarea {
@@ -830,58 +489,39 @@ input.form-submit:hover,
 input.form-submit:focus {
   background: #dedede;
 }
-[dir="rtl"] .password-suggestions ul li {
-  margin-right: 1.2em;
-  margin-left: 0;
-}
 .form-item label {
   font-size: 1rem;
-}
-[dir="rtl"] .form-type-radio label,
-[dir="rtl"] .form-type-checkbox label {
-  margin-right: 4px;
-  margin-left: 0;
-}
-[dir="rtl"] .form-type-radio .description,
-[dir="rtl"] .form-type-checkbox .description {
-  margin-right: 2px;
-  margin-left: 0;
 }
 .form-actions {
   padding-top: 10px;
 }
-.contact-form #edit-name {
-  width: 75%;
-  border-radius: 4px;
-}
-.contact-form #edit-mail {
-  width: 75%;
-  border-radius: 4px;
-}
+/* Mobile base: full-width fields are easier to tap. The 75% width for
+   roomier screens arrives at the tablet breakpoint below. */
+.contact-form #edit-name,
+.contact-form #edit-mail,
 .contact-form #edit-subject {
-  width: 75%;
+  width: 100%;
+  box-sizing: border-box;
   border-radius: 4px;
 }
 .contact-form #edit-message {
-  width: 76.3%;
+  width: 100%;
+  /* So its 75% desktop width matches the text fields exactly, padding
+     included. */
+  box-sizing: border-box;
   border-top-left-radius: 4px;
   border-top-right-radius: 4px;
 }
-[dir="rtl"] .comment-form label {
-  float: right;
-}
-[dir="rtl"] .comment-form .form-type-checkbox,
-[dir="rtl"] .comment-form .form-radios,
-[dir="rtl"] .comment-form .form-item .description {
-  margin-left: 0;
-  margin-right: 120px;
+@media only screen and (min-width: 768px) {
+  .contact-form #edit-name,
+  .contact-form #edit-mail,
+  .contact-form #edit-subject,
+  .contact-form #edit-message {
+    width: 75%;
+  }
 }
 #edit-actions input {
   margin-right: 0.6em;
-}
-[dir="rtl"] #edit-actions input {
-  margin-left: 0.6em;
-  margin-right: 0;
 }
 .form-textarea-wrapper textarea {
   display: block;
@@ -894,28 +534,16 @@ body,
   background-color: #ffffff;
   color: #3b3b3b;
 }
-#main,
 body.overlay {
   background-color: #ffffff;
   color: #3b3b3b;
 }
 #page,
-.region-menubar .menu-item--active-trail a {
+.menu-item--active-trail a {
   background-color: #ffffff;
 }
 #header {
   background-color: #536d88;
-  background-image: url("data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJvYmplY3RCb3VuZGluZ0JveCIgeDE9IjAuMCIgeTE9IjAuNSIgeDI9IjEuMCIgeTI9IjAuNSI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2Y5OTMwMSIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iI2RkZmY2MSIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JhZCkiIC8+PC9zdmc+IA==");
-  background-size: 100%;
-  background-image: -webkit-gradient(
-    linear,
-    0% 50%,
-    100% 50%,
-    color-stop(0%, #536d88),
-    color-stop(100%, #334150)
-  );
-  background-image: -moz-linear-gradient(left, #536d88, #334150);
-  background-image: -webkit-linear-gradient(left, #536d88, #334150);
   background-image: linear-gradient(to right, #536d88, #334150);
   border-color: #ffffff;
 }
@@ -930,21 +558,6 @@ a:focus {
 a:active {
   color: #ac2610;
 }
-.column-block,
-.sidebar .block {
-  background-color: #ffffff;
-  border-color: #ffffff;
-  color: #444444;
-}
-.column-block h2,
-.sidebar h2 {
-  border-bottom-color: #cccccc;
-  color: #444444;
-}
-.column-block a,
-.sidebar a {
-  color: #a66c3a;
-}
 .node {
   background-color: #ffffff;
   border-color: #ffffff;
@@ -952,18 +565,7 @@ a:active {
 .node h2 {
   border-color: #cccccc;
 }
-#menubar {
-  border-bottom-color: #a46b34;
-}
-#menubar ul li {
-  border-right-color: #a46b34;
-  color: #3b3b3b;
-}
 .page-title {
-  background-color: #a46b34;
-  color: #f0f0f0;
-}
-#content .block h2 {
   background-color: #a46b34;
   color: #f0f0f0;
 }
@@ -971,48 +573,9 @@ a:active {
   background-color: transparent;
   color: #3b3b3b;
 }
-.region-header,
-.region-header a,
-.region-header li a.active,
 #header #name-and-slogan,
 #header #name-and-slogan a {
   color: #ffffff;
-}
-@media only screen and (min-width: 321px) and (max-width: 480px) {
-  #page-wrapper {
-    width: 100%;
-  }
-  #bottom-columns .column-block-wrapper {
-    width: 100% !important;
-    margin-top: 1em;
-  }
-  #bottom-columns .column-block-wrapper .column-block {
-    height: auto;
-    margin: 0 !important;
-  }
-}
-@media only screen and (min-width: 481px) and (max-width: 768px) {
-  #page-wrapper {
-    width: 90%;
-  }
-  #bottom-columns .column-block-wrapper {
-    width: 100% !important;
-    margin-top: 1em;
-  }
-  #bottom-columns .column-block-wrapper .column-block {
-    height: auto;
-    margin: 0 !important;
-  }
-}
-@media only screen and (min-width: 769px) and (max-width: 1024px) {
-  #page-wrapper {
-    width: 90%;
-  }
-}
-@media only screen and (min-width: 1025px) {
-  #page-wrapper {
-    width: 90%;
-  }
 }
 
 /* Modern layout helpers replacing the old layout <table>s. */

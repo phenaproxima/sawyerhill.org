@@ -38,10 +38,6 @@ canonifyURLs = true
     url = '/photos'
     weight = 4
   [[menu.main]]
-    name = 'Calendar of Events'
-    url = '/calendar'
-    weight = 5
-  [[menu.main]]
     name = 'Homes Available'
     url = '/forsale'
     weight = 6

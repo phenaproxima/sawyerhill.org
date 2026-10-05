@@ -15,7 +15,7 @@ EcoVillages use the latest and best practices related to sustainable development
 - Encourages spending time within the community, lessening trips needed for social activities
 - A future "Home Office" building will facilitate working close to home, reducing commuting needs for some residents
 - Maintains organic gardens
-- Meets [LEED](http://www.usgbc.org/DisplayPage.aspx?CategoryID=19) requirements in many of the designs.
+- Meets [LEED](//www.usgbc.org/DisplayPage.aspx?CategoryID=19) requirements in many of the designs.
 - "Super-insulates" walls and roofs of buildings to allow for reduced heating loads
 - Uses a fresh air ventilation system and low-toxicity building materials to provide a healthy indoor environment
 - Reduces the use of asphalt by clustering parking

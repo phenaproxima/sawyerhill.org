@@ -2,10 +2,10 @@
 title = "Mosaic Common House"
 +++
 
-<p><a href="http://www.flickr.com/photos/mosaiccommons/sets/72157622563888154/"><img src="http://photos.mosaic-commons.org/albums/common-house/abr.thumb.jpg"> <img src="http://farm3.static.flickr.com/2647/4143211523_5967719599_m.jpg"> <img src="http://photos.mosaic-commons.org/albums/common-house/abb.thumb.jpg">  <img src="http://farm3.static.flickr.com/2697/4125615707_740f9824de_m.jpg"> <img src="http://farm5.staticflickr.com/4076/4755326719_fd5c4ed714_m.jpg" width="250"> <img src="http://farm3.staticflickr.com/2588/4035511849_ebc0017cb1_m.jpg" width="250"> </a><br>
+<p><a href="//www.flickr.com/photos/mosaiccommons/sets/72157622563888154/"><img src="//photos.mosaic-commons.org/albums/common-house/abr.thumb.jpg"> <img src="//farm3.static.flickr.com/2647/4143211523_5967719599_m.jpg"> <img src="//photos.mosaic-commons.org/albums/common-house/abb.thumb.jpg">  <img src="//farm3.static.flickr.com/2697/4125615707_740f9824de_m.jpg"> <img src="//farm5.staticflickr.com/4076/4755326719_fd5c4ed714_m.jpg" width="250"> <img src="//farm3.staticflickr.com/2588/4035511849_ebc0017cb1_m.jpg" width="250"> </a><br>
 </p><center><a href="https://www.flickr.com/photos/mosaiccommons/sets/72157622563888154/">more photos...</a></center>
 
-Mosaic Common's [Common House](http://photos.mosaic-commons.org/common-house) is the center of our neighborhood, both physically and socially.  It's the place where the community comes together -- for shared meals, for games and entertainment, for meetings, for parties, for hobbies and activities.
+Mosaic Common's [Common House](//photos.mosaic-commons.org/common-house) is the center of our neighborhood, both physically and socially.  It's the place where the community comes together -- for shared meals, for games and entertainment, for meetings, for parties, for hobbies and activities.
 
 Our Common House provides
 
@@ -32,4 +32,4 @@ Our Common House provides
 
 All residents have full use of the common house.  It's like having extra rooms on your house that happens to not be attached.
 
-<p><a href="http://www.mosaic-commons.org/chplans">Common house floor plans</a></p>
+<p><a href="//www.mosaic-commons.org/chplans">Common house floor plans</a></p>

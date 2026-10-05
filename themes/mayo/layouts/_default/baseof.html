@@ -2,211 +2,79 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8" />
-<meta name="MobileOptimized" content="width" />
-<meta name="HandheldFriendly" content="true" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<link rel="icon" href="{{ "files/sun2_0.gif" | relURL }}" type="image/gif" />
+    <meta name="MobileOptimized" content="width" />
+    <meta name="HandheldFriendly" content="true" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="{{ "files/sun2_0.gif" | relURL }}" type="image/gif" />
 
     <title>{{ .Title }} | {{ .Site.Title }}</title>
     <link rel="stylesheet" media="all" href="{{ "files/css/css_UzMyn586wLTNqswid7vIntpmdv1e9sy9EB11qrf32Jo.css" | relURL }}" />
-<link rel="stylesheet" media="all" href="{{ "files/css/css_PblfIxtqwTYJXV9KNMJxGFJornTq7fQJyq7jgeff8fc.css" | relURL }}" />
-{{ block "head" . }}{{ end }}
-
+    <link rel="stylesheet" media="all" href="{{ "files/css/css_PblfIxtqwTYJXV9KNMJxGFJornTq7fQJyq7jgeff8fc.css" | relURL }}" />
+    {{ block "head" . }}{{ end }}
   </head>
-  <body class="no-sidebars rc-3 path-node node--type-page">
+  <body>
     <a href="#main-content" class="visually-hidden focusable skip-link">
       Skip to main content
     </a>
 
-      <div class="dialog-off-canvas-main-canvas" data-off-canvas-main-canvas>
-    <div id="page-wrapper" style=" margin-top: 14px; margin-bottom: 14px;">
-<div id="page" style="padding: 10px;">
-    <header id="header" role="banner" style=" border-width: 1px;" aria-label="Site header">
-    <div class="section clearfix">
-    <div id="header-watermark" style="background-image: url({{ "files/pat-6.png" | relURL }});" >
-    <div class="section clearfix">
+    <div id="page">
 
-              <div id="header-searchbox">
-       <form class="search-block-form" action="{{ "search/" | relURL }}" method="get" id="search-block-form" accept-charset="UTF-8">
-  <div class="js-form-item form-item js-form-type-search form-item-keys js-form-item-keys form-no-label">
-      <label for="edit-keys" class="visually-hidden">Search</label>
-        <input onblur="if (this.value == '') {this.value = 'search this site';}" onfocus="if (this.value == 'search this site') {this.value = '';}" type="search" id="edit-keys" name="q" value="search this site" size="13" maxlength="128" class="form-search form-text"  />
+      <header id="header" role="banner" aria-label="Site header">
+        <div id="header-watermark">
 
-        </div>
+          <div id="site_logo">
+            <a href="{{ "" | relURL }}" title="Home" rel="home">
+              <img src="{{ "files/logo.png" | relURL }}" alt="Home" />
+            </a>
+          </div>
 
-</form>
+          <div id="name-and-slogan">
+            <h1 id="site-name">
+              <a href="{{ "" | relURL }}" title="Home" rel="home">{{ .Site.Title }}</a>
+            </h1>
+            <div id="site-slogan">{{ .Site.Params.tagline }}</div>
+          </div>
 
-        </div>
+          <div id="header-searchbox">
+            <form action="{{ "search/" | relURL }}" method="get" accept-charset="UTF-8">
+              <label for="edit-keys" class="visually-hidden">Search</label>
+              <input type="search" id="edit-keys" name="q" placeholder="search this site" maxlength="128" class="form-search form-text" />
+            </form>
+          </div>
 
+        </div> <!-- /#header-watermark -->
+      </header>
 
-      <div class="region region-header">
-    <div id="block-mayo-branding" class="site-branding block block-system block-system-branding-block">
-
-
-                <div id="site_logo">
-        <a href="{{ "" | relURL }}" title="Home" rel="home">
-          <img src="{{ "files/logo.png" | relURL }}" alt="Home" />
-        </a>
-        </div> <!-- /#logo -->
-
-              <div id="name-and-slogan" >
-                                  <h1 id="site-name">
-                <a href="{{ "" | relURL }}" title="Home" rel="home"><span>{{ .Site.Title }}</span></a>
-              </h1>
-                                                      <div id="site-slogan">{{ .Site.Params.tagline }}</div>
-                  </div> <!-- /#name-and-slogan -->
+      <!-- Nav and page title form one band between the header banner and
+           the main content. -->
+      <div id="navband">
+        <nav role="navigation" aria-label="Main navigation">
+          <ul class="menu-bart">
+            {{ range .Site.Menus.main }}
+            <li class="menu-item">
+              <a href="{{ .URL | relURL }}">{{ .Name }}</a>
+            </li>
+            {{ end }}
+          </ul>
+        </nav>
+        <h1 class="title page-title">{{ .Title }}</h1>
       </div>
 
-  </div>
-
-
-    </div> <!-- /.section -->
-    </div> <!-- /#header-watermark -->
-    </div></header> <!-- /#header -->
-
-    <div class="clearfix cfie"></div>
-
-    <!-- for nice_menus, superfish -->
-        <div id="menubar" class="menubar clearfix"
-      >
-
-        <div class="region region-menubar">
-    <nav role="navigation" aria-labelledby="block-mayo-main-menu-menu" id="block-mayo-main-menu" class="block block-menu navigation menu--main">
-
-  <h2 class="visually-hidden" id="block-mayo-main-menu-menu">Main navigation</h2>
-
-
-          <div class="content">
-        <div class="menu-toggle-target menu-toggle-target-show" id="show-block-mayo-main-menu"></div>
-    <div class="menu-toggle-target" id="hide-block-mayo-main-menu"></div>
-    <a class="menu-toggle" href="#show-block-mayo-main-menu">Show &mdash; Main navigation</a>
-    <a class="menu-toggle menu-toggle--hide" href="#hide-block-mayo-main-menu">Hide &mdash; Main navigation</a>
-
-              <ul class="menu-bart">
-                    {{ range .Site.Menus.main }}
-                    <li class="menu-item">
-        <a href="{{ .URL | relURL }}">{{ .Name }}</a>
-              </li>
-                    {{ end }}
-        </ul>
-
-
-
-  </div>
-</nav>
-  </div>
-
-    </div>
-
-    <div id="main-wrapper">
-    <div id="main" class="clearfix"
-      >
-
-
-
-
-
-      <div class="clearfix cfie"></div>
-
-
-      <!-- main content -->
-      <main id="content" class="column"><section class="section">
-
-
+      <main id="content">
         <a id="main-content"></a>
+        <article class="node clearfix">
+          {{ block "main" . }}{{ .Content }}{{ end }}
+        </article>
+      </main>
 
+      <div id="bottom-wrapper">
+        <form action="http://lists.sawyerhill.org/mailman/subscribe/interest" method="get">
+          <p align="center" style="background-color: #FFFFCC; padding:10px;">Subscribe to our email list (interest @ sawyerhill.org):<br>
+          <input name="email" size="20" type="text" value="Your email address">
+          <input name="submit" title="Click here to join our interest list" type="submit" value="Join Now"></p>
+        </form>
+      </div>
 
-
-                  <div class="region region-content">
-    <div id="block-mayo-page-title" class="block block-core block-page-title-block">
-
-
-      <div class="content">
-
-  <h1 class="title page-title"><span class="field field--name-title field--type-string field--label-hidden">{{ .Title }}</span>
-</h1>
-
-
-    </div>
-  </div>
-<div id="block-mayo-content" class="block block-system block-system-main-block">
-
-
-      <div class="content">
-      <article class="node node--type-page node--view-mode-full clearfix">
-  <div class="node__content clearfix">
-
-            <div class="field field--name-body field--type-text-with-summary field--label-hidden field__item">{{ block "main" . }}{{ .Content }}{{ end }}</div>
-
-  </div>
-
-</article>
-
-    </div>
-  </div>
-
-  </div>
-
-
-
-      </section></main> <!-- /.section, /#content -->
-
-
-      <!-- sidebar (first) -->
-
-
-      <div class="clearfix cfie"></div>
-
-           <div id="bottom-wrapper">
-        <div id="bottom-columns" class="clearfix">
-          <div class="column-blocks clearfix">
-                <!--column-blocks -->
-                                  <div class="column-block-wrapper clearfix" style="width: 100%">
-                    <div class="column-block clearfix">
-                        <div class="region region-bottom-column-first">
-    <div id="block-mayo-block" class="block block-block-content block-block-content3fa7cdac-606c-4f2d-b77f-e990323854f6">
-
-
-      <div class="content">
-
-            <div class="field field--name-body field--type-text-with-summary field--label-hidden field__item"><form action="http://lists.sawyerhill.org/mailman/subscribe/interest" method="get">
-<p align="center" style="background-color: #FFFFCC; padding:10px;">Subscribe to our email list (interest @ sawyerhill.org):<br>
-<input name="email" size="20" type="text" value="Your email address">
-<input name="submit" title="Click here to join our interest list" type="submit" value="Join Now"></p>
-</form>
-</div>
-
-    </div>
-  </div>
-
-  </div>
-
-                    </div>
-                  </div>
-
-
-
-                          </div>  <!--/.column-blocks -->
-
-
-        </div> <!--/#bottom-columns -->
-      </div> <!-- /#bottom-wrapper -->
-
-      <div class="clearfix cfie"></div>
-
-
-
-    </div> <!-- /#main -->
-    </div> <!-- /#main-wrapper -->
-
-    <!-- space between contents and footer -->
-
-
-  </div> <!-- /#page -->
-</div> <!-- /#page-wrapper -->
-
-  </div>
-
-
+    </div> <!-- /#page -->
   </body>
 </html>
